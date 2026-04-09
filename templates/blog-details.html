@@ -27,7 +27,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right navbar-social">
@@ -42,7 +42,7 @@
       </div>
     </header>
     <!--================Header Menu Area =================-->
-    
+    {% block content %}
     <!--================ Hero sm Banner start =================-->      
     <section class="mb-30px">
       <div class="container">
@@ -221,5 +221,6 @@
     <!--================ End Footer Area =================-->
 
     <script src="{% static 'scripts.js' %}"></script>
+  {% endblock %}
   </body>
 </html>
