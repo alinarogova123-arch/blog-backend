@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    {{ post.title }} - Blog Details
+  {{ post.title }} - Blog Details
 {% endblock %}
 
     {% block content %}
@@ -31,9 +31,9 @@
           <div class="col-lg-8">
             <div class="main_blog_details">
               {% if post.image_url %}  
-                <img class="img-fluid" src="{{post.image_url}}" alt="">
+                <img class="img-fluid" src="{{post.image_url}}" alt="image for post">
               {% else %}
-                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="replacement picture">
               {% endif %}  
               <h4>{{post.title}}</h4>
               <div class="user_details">
@@ -49,7 +49,7 @@
               <p>{{post.text}}</p>
               <div class="news_d_footer flex-column flex-sm-row">
                 <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>
-                    {{post.likes_amount}} people like this</a>
+                {{post.likes_amount}} people like this</a>
                 <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{post.comments|length}} Comments</a>
                 <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -70,13 +70,10 @@
                       <div class="desc">
                         <h5><a href="#">{{comment.author}}</a></h5>
                         <p class="date">{{comment.published_at}}</p>
-                        <p class="comment">
-                            {{comment.text}}
-                        </p>
+                        <p class="comment">{{comment.text}}</p>
                       </div>
                     </div>
-                    <div class="reply-btn">
-                            <a href="" class="btn-reply text-uppercase">reply</a> 
+                    <div class="reply-btn"><a href="" class="btn-reply text-uppercase">reply</a> 
                     </div>
                   </div>
                 </div>
